@@ -1,27 +1,21 @@
-.custom-shape-divider-top-1665147283 {
+.custom-shape-divider-bottom-1665209415 {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1665147283 svg {
+.custom-shape-divider-bottom-1665209415 svg {
     position: relative;
     display: block;
-    width: calc(184% + 1.3px);
-    height: 310px;
+    width: calc(219% + 1.3px);
+    height: 298px;
+    transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1665147283 .shape-fill {
-    fill: #FEA57A73;
-}
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-    .custom-shape-divider-top-1665147283 svg {
-        width: calc(272% + 1.3px);
-        height: 310px;
-    }
+.custom-shape-divider-bottom-1665209415 .shape-fill {
+    fill: #E8B2B2;
 }
