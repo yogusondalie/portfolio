@@ -21,7 +21,7 @@
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
- 
+
   /* Font weight */
   --weight-bold: 700;
   --weight-semi-bold: 600;
@@ -29,9 +29,10 @@
 
 
 
-/* border */
---border-size: 1px;
+  /* border */
+  --border-radius: 4px;
 }
+
 /* Typography */
 
 h1 {
@@ -71,9 +72,11 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
 /* Navbar */
 
 #navbar {
+  height: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,6 +91,9 @@ ul {
   background-size: 100px 50px;
 }
 
+.logo {
+  height: 50px;
+}
 
 .navbar__menu {
   display: flex;
@@ -97,18 +103,59 @@ ul {
 .navbar__menu__item {
   padding: 8px 20px;
   margin: 0 4px;
-font-size: var(--font-regular);
-cursor: pointer;
-border-radius: 10%;
+  font-size: var(--font-regular);
+  cursor: pointer;
+  border-radius: var(--border-radius);
 }
 
 .navbar__menu__item.active {
   border: solid var(--border-size) var(--color-dark-grey);
- 
-  
 }
 
 .navbar__menu__item:hover {
   background-color: var(--color-orange);
   /* border-radius: 10%; */
-} 
+}
+
+/* home */
+
+#home {
+  background-image: url("image/back ground.png");
+  background-position: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.home__avatar {
+  border-radius: 50%;
+  width: auto;
+  width: 20rem;
+  height: 15rem;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__contact {
+  position: relative;
+	z-index: 2;
+	background-color: transparent;
+	border: 2px solid var(--color-dark-grey);
+	color: var(--color-dark-grey);
+	line-height: center;
+  height: 2rem;
+  margin-top: 1rem;
+  border-radius: calc(var(--border-radius)*2);
+	/* overflow: hidden; */
+}
+
+/* btn written on top for all components of btn
+ background-color: transparent
+ cursor: pointer
+ border: none
+ outline: none*/
+
+.home__contact:hover {
+	color: var(--color-dark-pink);
+  border-color: var(--color-orange);
+  font-weight: var(--weight-semi-bold);
+}
+
