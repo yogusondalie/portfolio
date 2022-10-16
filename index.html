@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oli's portfolio</title>
-    <meta name="author" content="Olivia">
-    <link rel="icon" href="/style/image/favicon.png">
+    <meta name="author" content="Olivia" />
+    <link rel="icon" href="/style/image/favicon.png" />
     <script src="https://kit.fontawesome.com/cb3aa292ce.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
 </head>
 
 <body>
@@ -23,7 +23,7 @@
         </div>
 
         <ul class="navbar__menu">
-            <li class="navbar__menu__item active" >Home</li>
+            <li class="navbar__menu__item active">Home</li>
             <li class="navbar__menu__item">About</li>
             <li class="navbar__menu__item">Skills</li>
             <li class="navbar__menu__item">My name</li>
@@ -31,7 +31,7 @@
             <li class="navbar__menu__item">Contact</li>
         </ul>
 
- 
+
     </nav>
     <!-- Home -->
     <section id="home">
@@ -42,48 +42,68 @@
         <button class="home__contact">Contact Me</button>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section__container">
         <h1>About me</h1>
         <p>I've been studying on Diploma of Infomation Technology at TAFE Southbrisbane online to be a Front-end
             developer.
         </p>
         <div class="about_majors">
             <div class="major">
-                <div class="major__icon">empty</div>
-                <div class="major__title">Front-end</div>
-                <div class="major__description">
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="major__title">Front-end</h2>
+                <p class="major__description">
                     HTML, CSS, JavsScript
                     <br />React
-                </div>
+                </p>
             </div>
             <div class="major">
-                <div class="major__icon">empty</div>
-                <div class="major__title">Mobile</div>
-                <div class="major__description">
-                    empty
+                <div class="major__icon">
+                    <i class="fas fa-mobile"></i>
                 </div>
+                <h2 class="major__title">Mobile</h2>
+                <p class="major__description">
+                    empty
+                </p>
             </div>
             <div class="major">
-                <div class="major__icon">empty</div>
-                <div class="major__title">Back-end</div>
-                <div class="major__description">
-                    empty
+                <div class="major__icon">
+                    <i class="fas fa-server"></i>
                 </div>
+                <h2 class="major__title">Back-end</h2>
+                <p class="major__description">
+                    empty
+                </p>
             </div>
         </div>
-        <div class="about__edutation">
-            <img src="" alt="" class="edu__logo" />
-            <p class="edu__name">empty</p>
-            <p class="edu__period">empty</p>
-        </div>
-        <div class="about__edutation">
-            <img src="" alt="empty" class="edu__logo" />
-            <p class="edu__name">empty</p>
-            <p class="edu__period">empty</p>
+        <div class="education">
+            <div class="university">
+                <img src="style/image/education.png" 
+                alt="Yoenam University" 
+                class="edu" />
+            </div>
+            <div class="edu__description">
+                <p class="edu__name">
+                    Yoenam University
+                </p>
+                <p class="edu__period">
+                    03.2004-02.2011
+                </p>
+            </div>
+            <img src="style/image/education.png" class="edu" alt="TAFE" />
+            <div class="edu__description">
+                <p class="edu__name">
+                    TAFE
+                </p>
+                <p class="edu__period">
+                    08.2020-current
+                </p>
+            </div>
         </div>
     </section>
     <!-- Skills -->
-    <section id="Skills">
+    <section id="Skills" class="section__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>
@@ -119,7 +139,7 @@
         </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section__container">
         <h3>My work</h3>
         <h2>Projects</h2>
         <div class="work__categories">
@@ -135,7 +155,7 @@
         </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section__container">
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contact__email">canghl24@gmail.com</h2>
         <div class="contact__links">

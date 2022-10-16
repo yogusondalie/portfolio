@@ -31,6 +31,9 @@
 
   /* border */
   --border-radius: 4px;
+
+  /* animation */
+  --animation-duration: 300ms;
 }
 
 /* Typography */
@@ -66,10 +69,11 @@ p {
 body {
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  list-style: none;
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
 }
 
@@ -159,3 +163,56 @@ ul {
   font-weight: var(--weight-semi-bold);
 }
 
+/* section commom */
+.section__container {
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+/* about me */
+
+.about_majors {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: var(--font-small);
+  margin-top: 50px;
+}
+
+.major__icon {
+  border: solid 4px var(--color-blue);
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 4rem;
+  color: var(--color-blue);
+  padding: 4rem;
+  margin: auto;
+}
+
+.major__icon:hover i{
+ transform: rotate(-30deg) scale(1.5);
+ transition-duration: all var(--animation-duration) ease;
+ color: var(--color-dark-pink);
+}
+
+.major__title, .major__description {
+  color: var(--color-grey);
+}
+
+
+.edu {
+  height: 100px;
+}
+
+.edutation {
+display: flex;
+align-items: center;
+}
+
+
+.edu__description {
+  margin: 0 16px;
+  text-align: left;
+}
