@@ -140,15 +140,15 @@ ul {
 
 .home__contact {
   position: relative;
-	z-index: 2;
-	background-color: transparent;
-	border: 2px solid var(--color-dark-grey);
-	color: var(--color-dark-grey);
-	line-height: center;
+  z-index: 2;
+  background-color: transparent;
+  border: 2px solid var(--color-dark-grey);
+  color: var(--color-dark-grey);
+  line-height: center;
   height: 2rem;
   margin-top: 1rem;
   border-radius: calc(var(--border-radius)*2);
-	/* overflow: hidden; */
+  /* overflow: hidden; */
 }
 
 /* btn written on top for all components of btn
@@ -158,7 +158,7 @@ ul {
  outline: none*/
 
 .home__contact:hover {
-	color: var(--color-dark-pink);
+  color: var(--color-dark-pink);
   border-color: var(--color-orange);
   font-weight: var(--weight-semi-bold);
 }
@@ -169,6 +169,7 @@ ul {
   max-width: 1200px;
   margin: auto;
 }
+
 /* about me */
 
 .about_majors {
@@ -191,28 +192,71 @@ ul {
   margin: auto;
 }
 
-.major__icon:hover i{
- transform: rotate(-30deg) scale(1.5);
- transition-duration: all var(--animation-duration) ease;
- color: var(--color-dark-pink);
+.major__icon:hover i {
+  transform: rotate(-30deg) scale(1.5);
+  transition-duration: all var(--animation-duration) ease;
+  color: var(--color-dark-pink);
 }
 
-.major__title, .major__description {
+.major__title,
+.major__description {
   color: var(--color-grey);
 }
 
-
-.edu {
-  height: 100px;
-}
-
 .edutation {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
+.education_1 {
+  display: flex;
+}
 
 .edu__description {
-  margin: 0 16px;
+  margin: auto 16px;
   text-align: left;
+}
+
+/* skills */
+
+#skills {
+  background-color: var(--color-yellow);
+  margin: 0;
+  max-width: 2000px;
+  background-position: center;
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-light-grey);
+}
+.skillset__right {
+  flex-basis: 40%;
+  background-color: var(--color-grey);
+}
+
+.etc {
+  background-color: var(--color-light-grey);
 }
