@@ -13,15 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css" />
+    
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav id="navbar">
+    <nav id="navbar" class="navbar--dark">
         <div class="navbar__logo">
             <img class="logo" src="style/image/logo.png" alt="Oli's logo" />
         </div>
-
         <ul class="navbar__menu">
             <li class="navbar__menu__item active">Home</li>
             <li class="navbar__menu__item">About</li>
@@ -31,18 +31,20 @@
             <li class="navbar__menu__item">Contact</li>
         </ul>
 
-<!-- toggle button -->
-<button class="navbar__toggle-btn">
-    <i class="fa  s fa-bars"></i>
-</button>
+        <!-- toggle button -->
+        <button class="navbar__toggle-btn">
+            <i class="fa  s fa-bars"></i>
+        </button>
     </nav>
     <!-- Home -->
     <section id="home">
-        <img class="home__avatar" src="style/image/profile photo.png" alt="Oli's profile photo" />
-        <h1 class="home__title">Hello,<br>
-            I am a web developer.</h1>
-        <h2 class="home__description">Coding is growing on me!</h2>
-        <button class="home__contact">Contact Me</button>
+        
+            <img class="home__avatar" src="style/image/profile photo.png" alt="Oli's profile photo" />
+            <h1 class="home__title">Hello,<br>
+                I am a web developer.</h1>
+            <h2 class="home__description">Coding is growing on me!</h2>
+            <button class="home__contact">Contact Me</button>
+        
     </section>
     <!-- About -->
     <section id="about" class="section__container">
@@ -207,10 +209,7 @@
             <h3>See what they say about me</h3>
             <div class="testimonials">
                 <div class="testimonial">
-                    <img src="/style/image/testimonial/people1.jpg" 
-                    alt="People" 
-                    class="testimonial__avatar" 
-                    />
+                    <img src="/style/image/testimonial/people1.jpg" alt="People" class="testimonial__avatar" />
                     <div class="testimonial__speech-bubble">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
@@ -258,6 +257,9 @@
     <button class="arrow-up">
         <i class="fas fa-arrow-up"></i>
     </button>
+    <script src="/main.js">
+       
+    </script>
 </body>
 
 </html>
