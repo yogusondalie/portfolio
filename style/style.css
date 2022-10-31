@@ -163,19 +163,14 @@ ul {
   /* overflow: hidden; */
 }
 
-/* btn written on top for all components of btn
- background-color: transparent
- cursor: pointer
- border: none
- outline: none*/
-
 .home__contact:hover {
   color: var(--color-dark-pink);
   border-color: var(--color-orange);
   font-weight: var(--weight-semi-bold);
 }
 
-/* section commom */
+
+/* section common */
 .section__container {
   padding: 50px;
   max-width: 1200px;
