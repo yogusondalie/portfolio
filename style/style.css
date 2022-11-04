@@ -107,13 +107,14 @@ ul {
 
 .navbar__menu__item {
   padding: 8px 20px;
-  margin: 0 4px;
+  margin: 0 5px;
   font-size: var(--font-regular);
   cursor: pointer;
   border-radius: var(--border-radius);
+  border: 2px solid transparent;
   list-style: none;
 }
-
+/* 호버가 아닐때도 border가 같은 조건이지만 보이지 않게 설정하면 글짜가 울지않음 */
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
   border: 2px solid var(--color-white);
@@ -389,9 +390,9 @@ ul {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+ transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -498,6 +499,7 @@ a {
     display: block;
   }
 
+  
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -508,6 +510,10 @@ a {
     width: 100%;
     margin: 0 auto;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .logo {

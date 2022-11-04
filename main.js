@@ -14,6 +14,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
+
 // link with each page to scroll to view
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -22,8 +23,15 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    // To fold dropdown menu from toggle button(mobile)
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+// Toggle button for mobile screen 
+const navebarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navebarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 // contact btn links to contact page
