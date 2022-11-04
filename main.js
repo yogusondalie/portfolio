@@ -1,4 +1,5 @@
-'user strict'
+'use strict'
+
 // Decorated navbar
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -21,13 +22,68 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 });
 
 // contact btn links to contact page
-const contactBtn = document.querySelector('.home__contact');
-contactBtn.addEventListener('click', (e) => {
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
+});
+
+//change home opacity when user scrolls down the page
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+// console.log(window.scrollY);
+// console.log(`homeHeight: ${homeHeight}`);
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Handling arrow-up icon
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+
+// projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+
+    // console.log(filter);
+    projectContainer.classList.add('anim-out');
+    // 애니메이션 효과가 계속 아웃된 상태로 머물러 화면에서 보이지 않음 
+    // Animaition function is focused out of screen as anim-out.
+    // So as time passed the function needs to be removed from code.
+
+    setTimeout(() => {
+
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if (filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 });
 
 function scrollIntoView(slector) {
@@ -36,19 +92,3 @@ function scrollIntoView(slector) {
         behavior: 'smooth'
     });
 }
-
-//change home opacity when user scrolls down the page
-const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
-console.log(window.scrollY);
-console.log(`homeHeight: ${homeHeight}`);
-document.addEventListener('scroll', () => {
-    home.style.opacity = 1 - window.scrollY / homeHeight
-});
-// const homeChange = document.addEventListener('scroll',
-//     function (e) {
-//         if (window.scrollY > 500) {
-//             const home = document.getElementById("#home");
-//             home.classList.add("reduced-opacity");
-//         }
-//     });
