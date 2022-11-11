@@ -114,6 +114,7 @@ ul {
   border: 2px solid transparent;
   list-style: none;
 }
+
 /* 호버가 아닐때도 border가 같은 조건이지만 보이지 않게 설정하면 글짜가 울지않음 */
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
@@ -137,14 +138,14 @@ ul {
 #home {
   background: url("image/back ground.png") center/cover no-repeat;
   text-align: center;
-  padding: 250px 0;
+  padding: 10rem 0;
 }
 
 .home__avatar {
   border-radius: 50%;
-  width: auto;
+  height: 20rem;
   width: 20rem;
-  height: 15rem;
+  margin-right: 25px;
   border: 2px solid var(--color-light-white);
 }
 
@@ -392,7 +393,7 @@ ul {
   left: 50%;
   width: 50px;
   height: 2px;
- transform: translateX(-50%);
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
@@ -499,7 +500,7 @@ a {
     display: block;
   }
 
-  
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -518,6 +519,12 @@ a {
 
   .logo {
     height: 40px;
+    margin-top: 5px;
+  }
+
+  .navbar__toggle-btn {
+    top: 15px;
+    right: 70px;
   }
 
   /* about me */
@@ -543,14 +550,36 @@ a {
     margin-bottom: 1rem;
   }
 
+  .category__btn {
+    width: 100%;
+  }
+
   /* testimonials */
 
   .testimonial {
     margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
+  }
+
+  .arrow-up {
+    right: 70px;
+  }
+
+  .arrow-up.visible {
+    display: block;
+    opacity: 0.5;
+    pointer-events: auto;
+
   }
 }
